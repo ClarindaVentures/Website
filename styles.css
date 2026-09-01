@@ -1,4 +1,4 @@
-/* Clarinda Ventures — design system */
+/* Clarinda Park Ventures — design system */
 
 :root {
   --paper: #F5F4F1;
@@ -162,6 +162,17 @@ p:last-child {
   margin: 3rem 0 0;
 }
 
+.hero-visual {
+  margin: 3rem 0 0;
+}
+
+.hero-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+}
+
 .lede {
   max-width: 640px;
   font-size: 1.1rem;
@@ -266,6 +277,19 @@ p:last-child {
 .card .role {
   color: var(--ink-soft);
   margin: 0 0 1rem;
+}
+
+/* Group structure chart */
+.chart-wrap {
+  overflow-x: auto;
+  margin: 2.5rem 0;
+}
+
+.org-chart {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
 }
 
 /* Numbered blocks (about page) */
