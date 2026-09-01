@@ -1,0 +1,404 @@
+/* Clarinda Ventures — design system */
+
+:root {
+  --paper: #F5F4F1;
+  --paper-2: #ECEAE3;
+  --ink: #14181F;
+  --ink-soft: #4A5361;
+  --navy: #1B2A41;
+  --gold: #C7A252;
+  --line: rgba(20,24,31,0.14);
+  --line-strong: rgba(20,24,31,0.30);
+  --container: 1080px;
+
+  --font-head: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5.5vw, 3.9rem);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+h1 em, h2 em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  letter-spacing: -0.005em;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Eyebrow labels */
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  margin-bottom: 1.25rem;
+}
+
+/* Section labels: mono, uppercase, bottom rule spanning the container */
+.section-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  padding-bottom: 1.25rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.mono-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.placeholder {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+/* Layout sections */
+.section {
+  padding-block: 5rem;
+}
+
+.hero {
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+
+.hero-rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 3rem 0 0;
+}
+
+.lede {
+  max-width: 640px;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin-top: 1.5rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-block: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 26px;
+  height: 26px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.wordmark {
+  font-family: var(--font-head);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  font-size: 0.95rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  border-bottom-color: var(--line-strong);
+}
+
+.nav a[aria-current="page"] {
+  border-bottom-color: var(--gold);
+}
+
+/* Panel (e.g. company description) */
+.panel {
+  border: 1px solid var(--line-strong);
+  background: var(--paper-2);
+  padding: 2rem;
+}
+
+.panel .micro-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+
+/* Ownership / info cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  padding: 2rem;
+}
+
+.card .num {
+  display: block;
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card .role {
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+
+/* Numbered blocks (about page) */
+.numbered-block {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.numbered-block:last-child {
+  border-bottom: none;
+}
+
+.numbered-block .num {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  min-width: 2ch;
+}
+
+/* Definition rows (registered entity facts) */
+.def-rows {
+  border-top: 1px solid var(--line);
+}
+
+.def-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.def-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+}
+
+.def-value {
+  text-align: right;
+}
+
+/* Contact page */
+.mailto-large {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 6px;
+  margin: 1rem 0 3rem;
+}
+
+/* Legal pages */
+.legal-meta {
+  margin-top: 1rem;
+}
+
+.legal-section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 4rem 0 2.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.footer-col p {
+  margin: 0 0 1rem;
+}
+
+.footer-col p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* Responsive: single column under 720px */
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .def-row {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .def-value {
+    text-align: left;
+  }
+
+  .numbered-block {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    padding-top: 5rem;
+  }
+
+  .section {
+    padding-block: 3.5rem;
+  }
+}
