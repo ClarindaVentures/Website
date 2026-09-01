@@ -22,6 +22,17 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -215,10 +226,6 @@ p:last-child {
   border-bottom-color: var(--line-strong);
 }
 
-.nav a[aria-current="page"] {
-  border-bottom-color: var(--gold);
-}
-
 /* Panel (e.g. company description) */
 .panel {
   border: 1px solid var(--line-strong);
@@ -330,6 +337,12 @@ p:last-child {
 
 .legal-section:last-child {
   border-bottom: none;
+}
+
+.legal-section h3 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.15rem;
 }
 
 /* Footer */

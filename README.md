@@ -4,14 +4,11 @@ Static HTML/CSS corporate website for Clarinda Park Ventures Limited.
 
 ## Stack
 
-Hand-written static HTML and CSS with no build step, no JavaScript dependencies, and a single Google Fonts stylesheet link. The site consists of five core pages:
+Hand-written static HTML and CSS with no build step, no JavaScript dependencies, and a single Google Fonts stylesheet link. The site is a single page:
 
-- `index.html` — landing page
-- `about.html` — company background
-- `contact.html` — contact details (email only, no form)
-- `terms.html` — terms of service
-- `privacy.html` — privacy policy
-- `styles.css` — shared stylesheet
+- `index.html` — all content, navigated via hash anchors (`#about`, `#contact`, `#terms`, `#privacy`, plus `#description`, `#ownership`, `#entity`)
+- `styles.css` — stylesheet
+- `robots.txt` — disallows all crawling
 
 ## Deployment
 
@@ -29,7 +26,7 @@ The following items are clearly marked as `PLACEHOLDER` in HTML comments and mus
 - Registered office address
 - CRO registration number (Companies Registration Office of Ireland)
 
-Additionally, the `robots` meta tag is currently set to `noindex` to prevent search engine indexing until the site is ready for public access. Update once all placeholders are filled.
+Search indexing is blocked two ways: `robots.txt` disallows all crawling, and the page carries a `noindex, nofollow` robots meta tag. Remove both if the site should ever be indexed.
 
 ## Email Setup
 
